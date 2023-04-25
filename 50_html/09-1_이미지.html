@@ -11,6 +11,25 @@
 <body>
     <h1>이미지</h1>
     <!-- 
+        <img src="" alt="" width=:"가로크기" heiget="높이">
+        <figure>
+            <img src="" alt="">
+        <figcaption>캡션</figcaption>
+        </figure>
+        
+        // 이미지 맵
+        1. 하나의 이미지에 하나 이상의 링크 적용
+        2. img태그의 usemap 속성값은 map태그의 name값과 같아야 한다.
+        3. area태그에 alt 속성을 반드시 기록한다
+        4. 좌표 찾기: https://www.image-map.net
+        <img src="경로설정" alt="" usemap="#map">
+        <map name="">
+        <area shape="rect" coords="x1,y1,x2,y2" href="" alt="">
+        <area shape="circle" coords="x1,y1,r alt="" href="">
+        <area shape="poly" coords="x1,y1,y2,x2">
+        </map>
+     -->
+    <!-- 
         사용 이미지
         1. 이탈리아 풀리아주의 건축물인 트룰리: assets/pic_trulli.jpg
           - 캡션: Fig.1 - Trulli, Puglia, Italy.
@@ -19,6 +38,12 @@
     -->
     <h2>캡션 달기</h2>
     <!-- figure와 figcaption을 사용하여 이미지에 캡션을 달아 보세요. -->
+    <figure>
+        <img src="/50_html/assets/pic_trulli.jpg" alt="trulli">
+        <figcaption>Fig.1 - Trulli, Puglia, Italy</figcaption>
+    </figure>
+    <!-- width와 height는 사용하는 것이 좋으나 css언어로 지정하는 것이 좋다 -->
+    <a href="https://www.khan.co.kr/"><img src="/50_html/assets/KakaoTalk_20230421_160031455.png" alt="경향신문 로고"></a>
 
     <hr>
     <h2>이미지 맵</h2>
@@ -36,9 +61,11 @@
      -->
     <p>컴퓨터, 핸드폰, 커피 잔을 클릭하여 새 페이지로 이동하고 주제에 대해 자세히 읽어보십시오.</p>
 
-    <img src="" alt="" usemap="">
+    <img src="/workplace.jpg" alt="workplace" usemap="#map">
     <map name="">
-        <area shape="" coords="" alt="" href="" target="">
+        <area shape="rect" coords="293,174,335,246" alt="핸드폰" href="https://www.google.com" target="_blank">
+        <area shape="circle" coords="339,302,45" alt="커피 잔" href="https://www.naver.com" target="_blank">
+        <area shape="poly" coords="38,43,272,44,265,187,270,343,30,339,43,176" alt="컴퓨터" href="http://gpfl0520.dothome.co.kr" target="_blank">
     </map>
 
 </body>
