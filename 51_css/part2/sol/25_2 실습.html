@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            /* 마커 제거 */
+            list-style: none;
+        }
+        /* 자식이 float되면, 부모의 높이가 0 */
+        .wrap {
+        background: #333;
+        /* 가로 가운데 */
+        width: 1500px;
+        margin: 0 auto;
+        overflow: hidden;
+        }
+       
+        li {
+            width: 360px; 
+            height: 240px;
+            background: #999;
+            float: left;
+            margin-right: 20px;
+            }
+            /* 숫자 0은 생략가능 */
+            .mr0 {
+                margin-right: 0;
+            }
+
+        
+        /*
+        float: left;right;none
+        clear: left;right;none : float의 영향을 받지 않게 한다
+         */
+
+        .div1 {
+            background:lightblue;
+            /* width의 기본값이 콘텐츠크기로 바뀐다. */
+            float:left;
+        }
+        .div2 {
+            background:lightcoral;
+            float: right;
+        }
+        .div3 {
+            background:lightgoldenrodyellow;
+            /* 상위 요소의 float 효과를 제거 */
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+    <h1>플로트</h1>
+     <div class="wrap">
+        <ul>
+            <li>박스1</li>
+            <li>박스2</li>
+            <li>박스3</li>
+            <li class="mr0">박스4</li>
+            <li>박스5</li>
+            <li>박스6</li>
+            <li>박스7</li>
+            <li class="mr0">박스8</li>
+        </ul>
+     </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+@charset "utf-8"
+
+    {
+    margin: 0;
+}
+
+/* common */
+h2 {
+    height: 125px;
+    background: blue;
+}
+p {
+    height: 54px;
+    background: darkgreen;
+}
+
+/* 헤더 */
+nav {
+    height: 54px;
+    background: antiquewhite;
+}
+
+/* section1 */
+#home {
+    height: 1045px;
+    background: cornsilk;
+}
+
+/* section2 */
+
+/* section3 */
+/* section4 */
+/* footer */
