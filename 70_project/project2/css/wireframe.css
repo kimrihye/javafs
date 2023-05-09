@@ -30,7 +30,7 @@ header {
     float: left;
 }
 nav {
-    float: right
+    float: right;
 }
 nav li {
     display: inline-block;
@@ -82,6 +82,7 @@ li:not(:nth-of-type(4n)) {
 #artist h2 {
     margin-bottom: 48px;
 }
+
 
 /* 섹션3 */
 #news li h3 {
