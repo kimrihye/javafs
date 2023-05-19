@@ -57,9 +57,11 @@ header {
     background: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12), 0 2px 10px rgba(0, 0, 0, 0.12);
 }
+/* 로고 */
 .logo {
     float: left;
 }
+/* 네비게이션 */
 nav {
     float: right;
 }
@@ -89,7 +91,6 @@ section {
 #artist li, #news li {
     float:left;
     width: 362px;
-    padding: 10px;
 }
 #artist ul::after, #news ul::after {
     content:'';
@@ -101,16 +102,23 @@ section {
 }
 
 /* section2 */
+#artist ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#artist li {
+    position: relative;
+    width: 362px;
+    margin-bottom: 16px;
+    color: #fff;
+}
 #artist h2 {
     margin-bottom: 48px;
 }
 #artist h3 {
-    padding: 12px 16px;
-    margin: 16px 0 54px;
-    border: none;
+    position: absolute;
     background: #000;
-    color: #fff;
-    text-align: center;
 }
 
 /* section3 */

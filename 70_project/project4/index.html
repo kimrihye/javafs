@@ -1,39 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메가커피</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메가커피</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <div id="wrap">
     <!-- 헤더 -->
-      <header>
-        <h1 id="logo"><a href="#">메가커피</a></h1>
-        <nav>내비게이션</nav>
-          <!-- ul.main>li*4>a{메뉴$}+ul.sub>li*4>a{서브} -->
-      <!--슬라이드 -->
-  <div id="slide">이미지 슬라이드</div>
-        <!--/슬라이드 -->
+    <header>
+      <h1 class="logo"><a href="#"><img src="images/logo.png" alt="쇼핑몰"></a></h1>
+      <!-- emmet기능: ul.main>li*4>a{메뉴$}+ul.sub>li*4>a{서브} -->
+      <nav>
+        <ul class="main">
+          <li>
+            <a href="#">메가스토리</a>
+            <ui class="sub">
+              <li><a href="#">브랜드</a></li>
+              <li><a href="#">BI</a></li>
+              <li><a href="#">오시는길</a></li>
+            </ui>
+          </li>
+          <li>
+            <a href="#">메뉴소개</a>
+            <ui class="sub">
+              <li><a href="#">음료</a></li>
+              <li><a href="#">푸드</a></li>
+              <li><a href="#">상품</a></li>
+            </ui>
+          </li>
+          <li>
+            <a href="#">창업안내</a>
+            <ui class="sub">
+              <li><a href="#">개설비용</a></li>
+              <li><a href="#">인테리어</a></li>
+              <li><a href="#">창업메뉴</a></li>
+            </ui>
+          </li>
+          <li>
+            <a href="#">메가소식</a>
+            <ui class="sub">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">이벤트</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">고객의소리</a></li>
+            </ui>
+          </li>
+        </ul>
+
+      </nav>
+    </header>
+      <!--/슬라이드 -->
       <!-- 메인 콘텐츠 -->
-      <section>
-        <div id="contents">공지사항/갤러리
-          <div>배너</div>
-          <div>바로가기</div>
+      
+        <div id="contents">
+          <div class="tabs">
+            <div>공지사항</div>
+            <div>
+              <ul>
+                <li><a href="#">메가 원두 관련 공지</a></li>
+                <li><a href="#">메가 원두 관련 공지</a></li>
+                <li><a href="#">메가 원두 관련 공지</a></li>
+                <li><a href="#">메가 원두 관련 공지</a></li>
+              </ul>
+            </div>
+            <div>
+              <a href="#"><img src="images/i1.jpg" alt="모자"></a>
+              <a href="#"><img src="images/i2.jpg" alt="클러치백"></a>
+              <a href="#"><img src="images/i3.jpg" alt="장갑"></a>
+              <a href="#"><img src="images/i1.jpg" alt="모자"></a>
+            </div>
+          </div>
+          <div class="banner">
+            <img src="images/banner.jpg" alt="드레스 보러가기">
+          </div>
+          <div class="shortcut">
+            <img src="images/quick.jpg" alt="모바일 앱설치">
+          </div>
+        
         </div>
-         </section>
+      </section>
       <!-- / 메인 콘텐츠 -->
       <!-- 푸터 -->
       <div>
-        <div id="footer">하단로고
-        <div>주소 및 저작권</div>
-        <div>sns</div>
+        <div class="b.logo">
+          <img src="images/logo2.png" alt="쇼핑몰">
         </div>
+        <div class="addr">
+          <p>서울특별시 중앙로 223 2F JUST 쇼핑몰</p>
+          <p>COPYRIGHT BY TBBROTHER. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="sns">sns</div>
+      </div>
       </footer>
       <!-- 푸터 -->
 
-  </div> 
+  </div>
 </body>
+
 </html>

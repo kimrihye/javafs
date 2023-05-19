@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>데이터 유형</h1>
+    <script>
+        let num =100;
+        let str = '자바스크립트';
+        let bool = true;
+        let un;
+
+        // 객체 window, document, console
+        //   - 매서드
+        //   - 속성
+        // window의 매서드
+        // alert()
+        // confirm()
+        // prompt()
+        
+        // 함수? 객체가 필요없는 매서드
+        // alert()
+        // confirm()
+        // prompt()
+        // Number(매개변수)
+
+
+        
+        /* 
+            데이터 유형
+            1. string: '문자열' 또는 "문자열"
+            2. number: 숫자
+            3. boolean(부울): true 또는 false
+            4. undefined
+            5. object(객체): Array(배열), Date(날짜), Math(수학), String(문자열), null, ...
+            bom(browser object model): window, document ....
+            dom(document object model): document 
+
+            undefined는 변수에 값이 등록되기 전의 기본값이고,
+            null은 변수에 저장된 데이터를 비우고자할 때 사용된다.
+            Boolean() 함수는 숫자 0과 null, undefined, 빈 문자('')를 제외한 모든 데이터에 대해 true를 반환한다.
+        */
+
+        // 문자열은 '' 또는 ""로 묶는다.
+
+        // string
+        let s1 = '자바스크립트';
+        let s2 = '100';
+        let s3 = '<h3>문자열</h3>';
+
+        
+
+
+        // number
+        let n1 = 100;
+        // nan(not a number) : 숫자가 아니다
+        let n2 = Number('오백'); 
+        let n3 = Number('500');
+
+
+        // boolean → 저장된 값은 true(참) 또는 false(거짓)
+        // 비교 연산자: >,< <=, >=, ==, !=
+        // 논리 연산자:$$(and), !!(or), !(not)
+        // 비교 연산자의 연산 결과는 true 아니면 false
+        let b1 = true;
+        let b2 = 10>= 100;
+        let b3 = Boolean('hello');
+        // boolean(값) ~ 값을 0, null, underfined, ''는 false 아니면 true
+        let b4 = Boolean(0);
+        let b5 = Boolean(null); 
+        let b6 = Boolean(undefined);
+        let b7 = Boolean('');
+
+
+        // undefined → 선언 후 값을 할당하지 않았을 때의 값
+        let u;
+
+
+        // null
+
+
+        // 출력
+        document.write(s1, '<br>');
+        document.write(s2, '<br>');
+        document.write(s3, '<br>');
+        document.write(n1, '<br>');
+        document.write(n2, '<br>');
+        document.write(b1, '<br>');
+        document.write(b2, '<br>');
+        document.write(b3, '<br>');
+        document.write(b4, '<br>');
+        document.write(u, '<br>');
+        document.write(n, '<br>');
+    </script>
+</body>
+
+
+
+</html>

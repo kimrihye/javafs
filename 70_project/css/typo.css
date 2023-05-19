@@ -1,0 +1,20 @@
+@charset 'utf-8';
+
+
+html {
+    font-size: 10px;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem/1.8;
+    color:#333;
+}
+/* a태그와 button태그의 글자색은 body 태그의 글자색을 상속받지 않는다.*/
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
