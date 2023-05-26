@@ -34,6 +34,7 @@ header i {
     position: relative;
     height: 930px;
     background:no-repeat 50% 50%/cover fixed;
+    background-image: url(../images/parallax1.jpg);
 }
 
 /* 요소를 부모 안에 정가운데 배치 */
@@ -93,6 +94,7 @@ section h2+p {
 }
 .profile p:last-of-type {
     flex: 0 0 48%;
+    margin-left: 35px;
 }
 .photo {
     width: 425px;
@@ -151,8 +153,9 @@ section h2+p {
 }
 
 /* section3 */
+
 #portfolio .parallax {
-    background-image: url(images/parallax2.jpg);
+    background-image: url(../images/parallax2.jpg);
 }
 
 /* 
@@ -163,17 +166,67 @@ section h2+p {
 */
 #portfolio ul {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #portfolio li {
     width: 231px;
     height: 162px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+#portfolio .morebtn  {
+    margin-top: 64px;
+    text-align: center;  
+} 
+#portfolio .morebtn a {
+   padding: 12px 24px;
+    background: #ccc;
 }
 
 /* section4 */
 #contact .parallax {
-    background-image: url(images/.parallax3);
+    background-image: url(../images/parallax3.jpg);
 }
+#contact .container {
+    display: flex;
+}
+#map {
+    flex: 0 0 330px;
+    height: 160px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 30px;
+}
+#contact address i {
+    margin-right: 20px;
+}
+#contact [name] {
+    width: 300px;
+    height: 44px;
+    padding-left: 8px;
+}
+#contact address + p {
+    margin: 16px 0;
+}
+#contact form {
+    text-align: right;
+}
+#contact [name="user_name"] {
+    margin-right: 12px;
+}
+#contact [name*="message"] {
+    width: 616px;
+    margin: 16px 0;
+}
+#contact button {
+    width: 160px;
+    height: 44px;
+    background: #000;
+    color: #fff;
+}
+
 
 /* footer */
 footer {

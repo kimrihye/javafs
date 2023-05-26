@@ -18,6 +18,11 @@
             setInterval(): 일정한 시간 간격으로 코드를 반복 실행
             clearInterval(): setInterval() 메서드 제거
 
+            setIntrval(functon){
+                코드
+            }, 시간);
+            시간은 ms(밀리초)
+
             var 참조변수 = setInterval(function(){
                 코드;
             }, 시간간격(ms));
@@ -25,18 +30,24 @@
             clearInterval(참조변수);
         */
 
-        var addNum = 0;
-        var subNum = 1000;
+        // 이벤트 처리
+        // 객체.on이벤트종류 = 함수;
+        btn.onclick = function() {
 
-        var auto_1 = setInterval(function(){
-            addNum++;
-            console.log("addNum: " + addNum);
-        }, 3000);
+        }
 
-        var auto_2 = setInterval(function(){
-            subNum--;
-            console.log('subNum: ' + subNum);
-        }, 3000);
+        // 변수
+        let increase = 0; decrease = 1000;
+
+        // 처리
+        const timer = setInterval(add,1000);
+
+        function 
+       
+
+        // 출력
+        console,log(increase);
+
     </script>
 </body>
 

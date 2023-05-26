@@ -30,18 +30,41 @@
 
         switch (site) {
             case '구글': url = 'www.google.com';
-            break;
+                break;
             case '다음': url = 'www.daum.net';
-            break;
+                break;
             case '네이버': url = 'www.naver.com';
-            break;
+                break;
             case '네이트': url = 'www.nate.com';
-            break;
+                break;
             default: alert('보기 중에 없는 사이트입니다.');
         }
 
-        // window.location.href = 'url'
-        // 현재 위치에서 url에 저장된 주소로 이동된다.
+        /* 
+        현실세계
+        자동차
+        -기능: 달리다, 멈춰있다
+        -특징: 브랜드, 가격, 색상, ...
+        사람
+        -기능: 달린다, 앉았다, ...
+        
+        내장 객체: window, document, ....
+          -매서드(기능), prompt(), ....
+          -속성: href
+        BOM 객체: window, location, document
+        
+        내장 함수: Number()
+        */
+
+        /* 
+        객체: 메서드()
+        객체.속성 - 값;
+        location,reload() ~ 브라우저 새로고침 
+        window.location.href = 'url' → 현재 위치에서 url에 저장된 주소로 이동된다.
+        */
+
+        
+        // if문의 실행코드가 한 문장일 경우 중괄호 생략 가능
         if (url) location.href = 'https://' + url;
     </script>
 </body>

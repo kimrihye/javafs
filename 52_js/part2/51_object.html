@@ -39,6 +39,19 @@
         // 객체 생성 시 new 키워드와 생성함수를 사용한다.
         // 참조변수(인스턴스명) = new 생성함수()
 
+        // TV객체
+        // this는 자기자신
+        var tv = new ObJect();
+        tv.color = 'white';
+        tv.price = 3000000;
+        // 익명함수
+        tv.info = function() {
+            document.write('tv색상'+ this.color, '<br>')
+            document.write('tv가격'+ this.price, '<br>')
+        }
+        
+        info();
+
 
 
     </script>
