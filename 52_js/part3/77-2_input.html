@@ -12,14 +12,35 @@
     <h1>텍스트 필드에 입력한 값을 화면에 표시하기</h1>
     <input type="text" id="subject">
     <button>버튼</button>
-    <ul id="itemList"></ul>
+    <ul id="itemList">
+        <li></li>
+    </ul>
 
     <script>
-        /* 
+       /* 
             요소.createElement(노드명) ~ 요소에 요소 노드 추가
             요소.createTextNode(텍스트) ~ 요소에 텍스트 노드 추가
             부모노드.appendChild(자식노드) ~ 부모 노드에 자식 노드 연결
         */
+
+        
+
+    const itemList = document.querySelector('#itemlist');
+    const inputBox = document.querySelector('#subject');
+    const btn = document.querySelector('button');
+    let txt;
+
+    
+
+    btn.onclick = txtlist;
+
+    function txtlist(){
+        const item = document.createElement('li');
+        let txt = inputBox.value;
+        const itemTxt = document.createTextNode(txt);
+        itemList.appendChild(item);
+        item.appendChild(itemTxt);
+    }
 
     </script>
 </body>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+</head>
+
+<body>
+    <h1>텍스트 노드를 사용하는 새로운 요소 추가하기</h1>
+    <div id="info"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>   
+    <script>
+        /* 
+            $('선택자a').createElement('선택자b') ~ 요소a에 요소b 생성
+            
+            
+            <div id="info">prepend내용append::after</div>
+            A.append(b) ~ A에 b 추가
+            A.prepend(b) ~ A에 b 추가
+            A.after(b) ~ A에 b 추가
+            A.before(b) ~ A에 b 추가
+            
+        */
+
+        /* 
+            #info 박스에 p 요소를 삽입하고 p요소의 내용으로 document object mdodel 의 줄임말이다를 삽입하여 #info 박스에 연결하시오.
+            img요소를 생성해서(srcsms 'pic_htmltree')
+
+            매서드: createElement(), createTextmdde(), appendChild()
+
+        */
+
+        const info = $('#info');
+        const para = document.createElement('p');
+
+        info.append(para);
+        const txt = document.createTextNode('Dom이란? Document Object Model의 줄임말이다.');
+        para.append(txt);
+
+        // const imgP = document.createElement('img');
+        // info.appendChild('imgP');
+        // imgP.setAttribute('src', '../assets/htmltree.gif');
+        // imgP.setAttribute('alt', 'Dom Tree');
+        
+
+
+    </script>
+</body>
+
+</html>

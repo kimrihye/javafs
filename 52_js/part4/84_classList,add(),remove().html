@@ -22,21 +22,46 @@
             height: 400px;
             background: red;
         }
+        
+       
     </style>
 </head>
 
 <body>
-    <ul>
-        <li>클래스 추가</li>
-        <li>클래스 제거</li>
-    </ul>
+    <button>클래스 추가</button>
+    <button>클래스 제거</button>
     <div></div>
 
     <script>
         /* 
+            $('선택자').width() 콘텐츠 가로 크기
+            $('선택자').height() 콘텐츠 세로 크기
+             
+
             요소.classList.add('클래스') ~ 요소의 클래스 추가
             요소.classList.remove('클래스') ~ 요소의 클래스 제거
         */
+
+        /* 
+            클래스 추가 버튼을 클릭하면
+            아래 회색 박스에 .on 클래스를 추가하고
+            클래스 제거 버튼을 클릭하면
+            아래 회색 박스에 .on클래스를 제거하시오
+        
+            매서드: classList.add(), classList.remove()
+        */
+
+        const bt0 = document.querySelectorAll('button')[0];
+        const bt1 = document.querySelectorAll('button')[1];
+        const box = document.querySelector('div');
+
+        bt0.onclick = function() {
+            box.classList.add('on');
+        }
+
+        bt1.onclick = function() {
+            box.classList.remove('on');
+        }
 
     </script>
 </body>

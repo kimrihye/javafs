@@ -19,6 +19,25 @@
             부모노드.appendChild(자식노드) ~ 부모 노드에 자식 노드 연결
         */
 
+        /* 
+            #info 박스에 p 요소를 삽입하고 p요소의 내용으로 document object mdodel 의 줄임말이다를 삽입하여 #info 박스에 연결하시오.
+            img요소를 생성해서(srcsms 'pic_htmltree')
+
+            매서드: createElement(), createTextmdde(), appendChild()
+
+        */
+
+        const info = document.querySelector('#info');
+        const para = document.createElement('p');
+        info.appendChild(para);
+        const txt = document.createTextNode('Dom이란? Document Object Model의 줄임말이다.');
+        para.appendChild(txt);
+        const imgP = document.createElement('img');
+        info.appendChild('imgP');
+        imgP.setAttribute('src', '../assets/htmltree.gif');
+        imgP.setAttribute('alt', 'Dom Tree');
+        
+
 
     </script>
 </body>
