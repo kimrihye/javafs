@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 슬라이드 */
+        #slidewrap {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 1400px;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            position: relative;
+        }
+
+        .slider .on {
+            transition: .3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slidewrap">
+        <ul class="slider">
+            <li><img src="images/main_visual.jpg" alt="이미지1"></li>
+            <li><img src="images/main_visual2.jpg" alt="이미지2"></li>
+            <li><img src="images/main_visual3.jpg" alt="이미지3"></li>
+        </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        const slider = $('.slider'),
+            sliderItem = $('.slider').find('li'),
+            
+            sliderItemWidth = 100,
+            
+            sliderItemCount = sliderItem.length + 2;
+        let num = 1;
+
+        
+        slider.width(`${sliderItemWidth * sliderItemCount}%`);
+        sliderItem.width(`${sliderItemWidth}%`);
+        
+        slider.css({ left: `${-1 * sliderItemWidth}%` });
+
+        
+        const sliderFirstItem = slider.find('li:first-of-type');
+        const sliderLastItem = slider.find('li:last-of-type');
+       
+        sliderLastItem.clone().prependTo(slider);
+       
+        sliderFirstItem.clone().appendTo(slider);
+
+        function slide() {
+            num++;
+            if (num > sliderItem.length) {
+                num = 1;
+                
+                slider.removeClass('on');
+                moveSlide(num - 1);
+            }
+            setTimeout(function () {
+                
+                slider.addClass('on');
+                moveSlide(num);
+            }, 100);
+        }
+
+        function moveSlide(cnt) {
+            let posX = cnt * sliderItemWidth * -1;
+            slider.css({ left: posX + '%' });
+            return false;
+        }
+
+       
+        setInterval(slide, 2000);
+
+    </script>
+</body>
+
+</html>

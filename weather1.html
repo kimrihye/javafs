@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+
+        /*
+         $.getJSON("demo_ajax_json.js", function(result){
+           $.each(result, function(i, field){
+             $("div").append(field + " ");
+           });
+         });  */
+
+        /* 
+        $.getJSON("파일(날씨경로)", function(data){
+          data가 할 일
+        });
+       */
+
+        $.getJSON("http://api.openweathermap.org/data/2.5/weather?id=1846898&appid=1dff17b8877d4a814df99310ea822273&&units=metric", function (data) {
+            var $ctemp = data.main.temp;
+            var $maxTemp = data.main.temp_max;
+            var $minTemp = data.main.temp_min;
+            var $wIcon = data.weather[0].icon;
+
+            console.log($ctemp, $maxTemp, $minTemp);
+
+            $('.ctemp').append($ctemp);
+            $('.clowtemp').append($minTemp);
+            $('.chightemp').append($maxTemp);
+            // $('.cicon').append("<img src='http://openweathermap.org/img/wn/"$wIcon"+ '@2x.png'");
+            $('.cicon').append('<img src="http://openweathermap.org/img/wh/$($wIcon)@2x.png">');
+
+            // 백팅문법
+            var $now = new date();
+            var $cDate = $now.getFullYear() + "/" +($now.getMonth()+1) + "/" + $now.getDate() + " " + $now.getHours() + ":" +$now.getMinutes();\
+            $('h2')
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <h1>weather api</h1>
+    <h2>날씨정보</h2>
+    <div class="ctemp">현재온도:</div>
+    <div class="clowtemp">최저온도:</div>
+    <div class="chightemp">최고온도:</div>
+    <div class="cicon">아이콘:</div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/fa9c464e26.js" crossorigin="anonymous"></script>
+    <script>
+        let weatherIcon = {
+            "01": "fas fa-son",
+            "02": "fas fa-cloude-son",
+            "03": "fas fa-cloud"
+        }
+
+        
+        $.ajax({
+            url : apiUri
+            type : "get", /* 타입(get,post,patch,put 등등) */
+            success: function(reap){/* 결과 성공 콜백함수 */
+                
+
+                $(".ctemp").append($ctemp);
+            }
+
+        });
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

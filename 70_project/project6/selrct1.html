@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("form[name=rel_f]".on('submit',function(){
+                var url = $('select',this).val(); 선택ㅎ/* 선택한 option value 값을 url 저장 */
+                window.open(); /* 새창띄우기 */
+                return false;
+            }));
+        });
+    </script>
+</head>
+<body>
+    <form action="#" method="get" name="rel_f"></form>
+    <fieldset>
+        <legend>관련사이트 이동</legend>
+        <select name="re_select">
+            <option value="http://nl.go.kr">국립 중앙 도서관</option>
+            <option value="http://nanet.go.kr">국회 도서관</option>
+            <option value="http://dlibrary.go.kr">국가 전자 도서관</option>
+        </select>
+        <input type="image" src="image/btngif.gif" alt="관련사이트이동">
+    </fieldset>
+</body>
+</html>
